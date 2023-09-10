@@ -2,16 +2,21 @@
   font-family: 'Ruda';
   src: url(../Fonts/Ruda-Black.ttf);
   font-weight: 900;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Ruda';
   src: url(../Fonts/Ruda-Bold.ttf);
   font-weight: 700;
+  font-display: swap;
+
 }
 @font-face {
   font-family: 'Ruda';
   src: url(../Fonts/Ruda-Regular.ttf);
   font-weight: 400;
+  font-display: swap;
+
 }
 
 :root {
@@ -112,7 +117,7 @@ a {
   font-weight: 900;
   padding: 10px 22px;
   padding: 6px 12px;
-  background-image: url('../images/team.jpg');
+  background-image: url('../images/team-bg.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
   white-space: nowrap;
@@ -507,6 +512,10 @@ video {
 .process-card--yellow .process-card__btn a {
   border-color: #f39200;
 }
+.process-image img{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* --------Summary section --------*/
 .summary {
@@ -523,14 +532,14 @@ video {
   background-color: #95c11f;
   border-radius: 10px;
   flex: 1;
-  background-image: url('../images/summary-1.jpg');
+  background-image: url('../images/summary.jpeg');
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 350px;
 }
 .summary-card--policy {
-  background-image: url('../images/policies-1.jpg');
+  background-image: url('../images/policies.jpeg');
   margin-left: 10px;
 }
 .summary-card > div {
@@ -686,7 +695,7 @@ footer .container {
   }
   /* --------Process section -------------*/
   .process{
-    background-image: url(../images/portrait-2.jpg);
+    background-image: url(../images/portrait-2.jpeg);
   }
   .process-image{
     display: none;
