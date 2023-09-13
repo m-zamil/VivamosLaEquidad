@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Ruda';
-  src: url(../Fonts/Ruda-Black.ttf);
-  font-weight: 900;
+  src: url(../Fonts/Ruda-Regular.ttf);
+  font-weight: 400;
   font-display: swap;
 }
 @font-face {
@@ -9,18 +9,22 @@
   src: url(../Fonts/Ruda-Bold.ttf);
   font-weight: 700;
   font-display: swap;
-
 }
+
 @font-face {
   font-family: 'Ruda';
-  src: url(../Fonts/Ruda-Regular.ttf);
-  font-weight: 400;
+  src: url(../Fonts/Ruda-Black.ttf);
+  font-weight: 900;
   font-display: swap;
-
 }
+
 
 :root {
   --color-citrine: #c2d500;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 *,
@@ -82,6 +86,9 @@ a {
 .bold {
   font-weight: 900;
 }
+.text-green{
+  color: #95C11F;
+}
 .container {
   padding: 0 10px;
   max-width: 992px;
@@ -122,14 +129,7 @@ a {
   background-repeat: no-repeat;
   white-space: nowrap;
 }
-@media (max-width:425px){
-  .team{
-    transform: scale(0.8);
-    transform-origin: center;
-    margin-right: -16px;
-    margin-left: -16px;
-  }
-}
+
 .team span:first-child {
   font-size: 12px;
   font-size: clamp(0.625rem, 0.4107rem + 1.0717vw, 0.98rem);
@@ -156,6 +156,7 @@ a {
   border-radius: 20px;
   display: inline-block;
   min-width: 140px;
+  font-weight: 400;
   min-width: max-content;
 }
 .main-nav li:first-child a {
@@ -303,6 +304,9 @@ a {
 .video-container {
   position: relative;
 }
+.video-container iframe{
+  border-radius: 6px;
+}
 video {
   border-radius: 5px;
 }
@@ -331,7 +335,7 @@ video {
 
 .infographics {
   text-align: center;
-  margin: 22px 0;
+  padding: 22px 0;
   overflow: hidden;
 }
 
@@ -547,13 +551,15 @@ video {
 }
 .summary-content {
   padding-left: 22px;
+  display: flex;
+  align-items: center;
 }
 .summary-content h2 {
   margin-top: 0;
-  padding: 40px 0;
+  padding: 50px 0;
 }
 .summary-content .h2 {
-  line-height: 1.3;
+  line-height: 1.1;
   margin-top: 0;
 }
 .summary-content .h2::before {
@@ -635,6 +641,19 @@ footer .container {
 }
 
 /* ----------- Responsive ----------- */
+
+@media (max-width:425px){
+  .team{
+    transform: scale(0.8);
+    transform-origin: center;
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+  .circle-container{
+    transform: scale(0.9);
+  }
+}
+
 @media (min-width: 768px) {
   .hashtag {
     padding: 10px 16px;
@@ -646,7 +665,7 @@ footer .container {
     justify-content: space-evenly;
     justify-content: center;
     margin-right: 0;
-    max-width: 992px;
+    max-width: 1092px;
     margin-left: auto;
     margin-right: auto;
   }

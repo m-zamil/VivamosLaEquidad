@@ -13,7 +13,7 @@
     <div class="container">
       <div class="header-wrapper">
         <div>
-          <p class="hashtag">#VivamosLaEquidad</p>
+          <p class="hashtag"><span class="text-green">#</span>VivamosLaEquidad</p>
         </div>
         <div>
           <img class="logo" src="./assets/images/SVG/logo.svg" width="190" alt="">
@@ -31,11 +31,11 @@
       <!-- Navigation ============================ -->
       <nav>
         <ul class="main-nav">
-          <li><a href="#">Qué es la Norma 3262</a></li>
-          <li><a href="#">estrategia e iniciativas</a></li>
-          <li><a href="#">dimensiones del SGIGC</a></li>
-          <li><a href="#">glosario de equidad</a></li>
-          <li><a href="#">POLÍTICAS Y MANUALES</a></li>
+          <li><a href="#info">Qué es la Norma 3262</a></li>
+          <li><a href="#process">estrategia e iniciativas</a></li>
+          <li><a href="#infographics">dimensiones del SGIGC</a></li>
+          <li><a href="#summary">glosario de equidad</a></li>
+          <li><a href="#summary">POLÍTICAS Y MANUALES</a></li>
         </ul>
       </nav>
       <div class="container">
@@ -69,7 +69,7 @@
             </div>
             <!-- About end ============================ -->
             <!-- Info Start ============================ -->
-            <div class="info">
+            <div class="info Navlink" id="info">
               <div class="info-content">
                 <h2 class="h2">Qué es la Norma 3262 V:2021</h2>
                 <p>
@@ -113,17 +113,13 @@
       <div class="container">
         <div class="equality-content">
           <h2>
-            <span class="h2">¿Porqué la equidad de género, </span>
+            <span class="h2">¿Por qué la equidad de género, </span>
             <br>
             <span class="h2">es un valor estratégico?</span>
           </h2>
           <!-- Video -->
           <div class="video-container">
-            <video width="300" id="video">
-              <source src="./assets/images/flower.mp4" type="video/mp4">
-            </video>
-            <div class="video-play-btn active" id="play-btn"><img src="./assets/images/SVG/play-btn.svg" width="30"
-                alt=""></div>
+            <iframe src="https://player.vimeo.com/video/711731957?h=bfa6cde4ac&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" width="320" height="180" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <!-- Video end-->
         </div>
@@ -131,7 +127,7 @@
     </div>
 
     <!-- ============== Process Start ============== -->
-    <div class="process">
+    <div class="process Navlink" id="process">
       <div class="process-wrapper">
         <div class="container">
           <div class="process__heading">
@@ -159,10 +155,9 @@
 
             <div class="process-card process-card--green">
               <div class="process-card__content">
-                <div class="process-card__header">Política de equidad de género</div>
+                <div class="process-card__header">Manual del SGIGC</div>
                 <div class="process-card__body">
-                  <p>Establece los principios, las medidas y acciones generales que guiarán el actuar de la Compañía,
-                    para promover la Equidad de Género.</p>
+                  <p>Establece los mecanismos y procedimientos para garantizar la equidad de género en todas las dimensiones de la Organización.                  </p>
                 </div>
                 <div class="process-card__btn">
                   <a href="#">ver más</a>
@@ -177,10 +172,9 @@
 
             <div class="process-card process-card--yellow">
               <div class="process-card__content">
-                <div class="process-card__header">Política de equidad de género</div>
+                <div class="process-card__header">Plan de acción</div>
                 <div class="process-card__body">
-                  <p>Establece los principios, las medidas y acciones generales que guiarán el actuar de la Compañía,
-                    para promover la Equidad de Género.</p>
+                  <p>Son las acciones e iniciativas que abordamos para promover la equidad de género en nuestra Organización.</p>
                 </div>
                 <div class="process-card__btn">
                   <a href="#">ver más</a>
@@ -207,7 +201,7 @@
     <!-- ============== Process End ============== -->
 
     <!-- ============== Infographics Start ============== -->
-    <div class="infographics">
+    <div class="infographics Navlink" id="infographics">
       <h2 class="h2">Conoce las 8 dimensiones del SGIGC</h2>
       <ul class="circle-container">
         <li>
@@ -289,7 +283,7 @@
 
     <!-- ============== Summary Start ============== -->
 
-    <div class="summary">
+    <div class="summary" id="summary">
       <div class="container">
         <div class="summary-cards">
           <div class="summary-card">
@@ -304,9 +298,8 @@
           <div class="summary-card summary-card--policy">
             <div class="summary-content">
               <h2>
-                <span class="h2"> Glosario </span> <br>
-                <span class="h2"> de equidad </span> <br>
-                <span class="h2"> de género</span>
+                <span class="h2">  Políticas  </span> <br>
+                <span class="h2"> y manuales </span>
               </h2>
             </div>
           </div>
@@ -385,21 +378,20 @@
   </footer>
   <!-- ============== Footer end ============== -->
   <script>
-    let vidCont = document.querySelector('.video-container');
-    let vid = document.getElementById('video');
-    let playBtn = document.getElementById('play-btn');
-    vidCont.addEventListener('click', function () {
-      console.log('click');
-      if (vid.paused) {
-        vid.setAttribute('controls', 'true');
-        vid.play();
-        playBtn.classList.toggle('active');
-      } else {
-        vid.setAttribute('controls', 'false');
-        vid.pause();
-        playBtn.classList.toggle('active');
-      }
-    });
+   let anchorlinks = document.querySelectorAll('a[href^="#"]')
+ 
+ for (let item of anchorlinks) { // relitere 
+     item.addEventListener('click', (e)=> {
+         let hashval = item.getAttribute('href')
+         let target = document.querySelector(hashval)
+         target.scrollIntoView({
+             behavior: 'smooth',
+             block: 'start'
+         })
+         history.pushState(null, null, hashval)
+         e.preventDefault()
+     })
+ }
   </script>
 </body>
 
