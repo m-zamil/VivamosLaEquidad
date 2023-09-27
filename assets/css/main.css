@@ -866,6 +866,7 @@ video {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  display: none;
   transition: all 0.5s ease;
 }
 .diagram .container {
@@ -875,6 +876,8 @@ video {
 .diagram.active {
   max-height: initial;
   opacity: 1;
+  display: block;
+  transition-duration: 0;
 }
 .diagram-wrapper {
   overflow: auto;

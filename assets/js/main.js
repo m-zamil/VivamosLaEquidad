@@ -8,6 +8,7 @@ for (let item of anchorlinks) {
       prevTarget.style.maxHeight = null;
       prevTarget.classList.remove('active');
     }
+
     let hashval = item.getAttribute('href');
     let target = document.querySelector(hashval);
     target.classList.add('active');
