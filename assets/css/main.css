@@ -769,7 +769,7 @@ video {
   position: relative;
   font-size: clamp(0.625rem, 0.3906rem + 0.75vw, 1rem);
   line-height: 1.5;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
 }
 .dim-list li::before {
   content: '>';
