@@ -721,9 +721,10 @@ video {
   display: inline-block;
   position: relative;
   border-radius: 16px;
-  padding: 4px 10px;
+  padding: 0.5em 10px;
   padding-right: 2.5em;
   background-color: #ff6e6e;
+  white-space: nowrap;
 }
 .dim__downbtn::after {
   content: '';
