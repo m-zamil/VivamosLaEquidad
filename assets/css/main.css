@@ -4,6 +4,7 @@
   font-weight: 400;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Ruda';
   src: url(../Fonts/Ruda-Bold.ttf);
@@ -117,21 +118,19 @@ a {
 }
 
 .team {
-  color: white;
   font-size: 14px;
   font-size: clamp(0.75rem, 0.5145rem + 1.1774vw, 1.14rem);
-  font-weight: 900;
+  font-weight: 700;
   padding: 10px 22px;
   padding: 6px 12px;
-  background-image: url('../images/team-bg.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
+  border: 1px solid #95c11f;
+  border-radius: 8px;
+  text-align: center;
   white-space: nowrap;
 }
 
 .team span:first-child {
-  font-size: 12px;
-  font-size: clamp(0.625rem, 0.4107rem + 1.0717vw, 0.98rem);
+  font-weight: 900;
 }
 
 /* ======== Hero Section ========*/
@@ -1091,7 +1090,7 @@ footer .container {
     padding: 10px 16px;
   }
   .team {
-    padding: 12px 24px;
+    padding: 14px 24px;
   }
   .main-nav {
     justify-content: space-evenly;
